@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Renault del Mar · Reporte de Performance · Septiembre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#9B0000; --black:#141414; --white:#fff; --grey-l:#CCCCCC; --grey-m:#9E9E9E;
+  --accent:#ED1C24; --card:#F4F4F4; --line:#E4E4E4; --txt:#2B2B2B; --txt2:#5C5C5C;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--txt);
+  font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-weight:800;line-height:1.15;margin:0}
+b,strong{font-weight:600}
+em{font-style:normal;color:var(--txt2)}
+
+/* HERO */
+.hero{background:var(--black);color:#fff;padding:92px 0 76px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-12%;top:-30%;width:62%;height:170%;
+  background:radial-gradient(ellipse at 40% 50%, rgba(155,0,0,.42), transparent 62%);pointer-events:none}
+.hero svg.swirl{position:absolute;right:-4%;top:-10%;height:125%;opacity:.85;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.kick{font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey-l);margin-bottom:22px}
+.hero h1{font-size:clamp(40px,7vw,70px);letter-spacing:-.02em}
+.hero h1 span{display:block;font-weight:300}
+.hero .per{font-size:clamp(15px,2.4vw,19px);color:#BDBDBD;margin-top:14px;font-weight:400}
+.hero .lead{max-width:620px;margin-top:30px;font-size:clamp(15px,2.1vw,17.5px);color:#E8E8E8;line-height:1.62}
+.hero .lead b{color:#fff}
+.hero img.logo{height:17px;margin-top:46px;opacity:.95}
+@media(max-width:860px){
+  .hero svg.swirl{right:-42%;opacity:.42}
+  .hero::after{opacity:.5}
+}
+
+/* SECCIONES */
+section{padding:74px 0;border-top:1px solid var(--line)}
+section.alt{background:var(--card)}
+.sec-kick{font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+h2{font-size:clamp(25px,4vw,36px);letter-spacing:-.015em;margin-bottom:14px}
+.sec-sub{max-width:760px;color:var(--txt2);font-size:16px;margin-bottom:34px}
+h3{font-size:19px;margin:0 0 10px}
+h4{font-size:15px;font-weight:600;margin:0 0 6px}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px}
+section.alt .kpi{background:#fff}
+.kpi .lab{font-weight:600;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-m);margin-bottom:10px}
+.kpi .fig{font-weight:800;font-size:clamp(26px,4vw,33px);letter-spacing:-.02em;line-height:1.05}
+.kpi .fig.red{color:var(--red)}
+.kpi .note{margin-top:9px;font-size:13px;color:var(--txt2);line-height:1.45}
+.kpi .note b{color:var(--txt)}
+
+/* OPORTUNIDADES */
+.opp{border:1px solid var(--line);border-radius:8px;background:#fff;margin-bottom:12px;overflow:hidden}
+.opp summary{cursor:pointer;padding:20px 22px;list-style:none;display:flex;gap:16px;align-items:flex-start}
+.opp summary::-webkit-details-marker{display:none}
+.opp .no{font-weight:800;color:var(--red);font-size:14px;min-width:26px;padding-top:2px}
+.opp .sum-t{flex:1}
+.opp .sum-t h3{font-size:17px;font-weight:600;margin-bottom:5px}
+.opp .sum-m{font-size:13px;color:var(--txt2)}
+.opp .chev{color:var(--grey-m);font-size:19px;line-height:1;transition:transform .2s;padding-top:3px}
+.opp[open] .chev{transform:rotate(180deg)}
+.opp .body{padding:0 22px 24px 64px;font-size:15px;color:var(--txt2);line-height:1.68}
+.opp .body p{margin:0 0 13px}
+.opp .body b{color:var(--txt)}
+.prop{background:var(--card);border-left:3px solid var(--red);padding:14px 16px;border-radius:0 6px 6px 0;margin-top:16px;font-size:14.5px;color:var(--txt)}
+.prop span{font-weight:600;color:var(--red);display:block;margin-bottom:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:620px){.opp .body{padding-left:22px}}
+
+/* BARRAS MENSUALES */
+.months{display:flex;gap:10px;align-items:flex-end;height:270px;margin:10px 0 6px}
+.mcol{flex:1;display:flex;flex-direction:column;align-items:center;height:100%}
+.mtot{font-weight:600;font-size:12px;margin-bottom:7px;color:var(--txt2);white-space:nowrap}
+.mcol.is-now .mtot{color:var(--red);font-weight:800}
+.mstack{flex:1;width:100%;max-width:70px;display:flex;flex-direction:column;justify-content:flex-end;border-radius:4px;overflow:hidden}
+.mseg{width:100%}
+.mseg-g{background:var(--grey-m)}
+.mseg-m{background:var(--red)}
+.mlab{margin-top:9px;font-size:12.5px;color:var(--txt2);font-weight:400}
+.mcol.is-now .mlab{font-weight:600;color:var(--txt)}
+.legend{display:flex;gap:20px;font-size:13px;color:var(--txt2);margin-top:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+
+/* BARRAS HORIZONTALES */
+.bar-row{display:grid;grid-template-columns:190px 1fr 108px;gap:14px;align-items:center;padding:7px 0}
+.bar-lab{font-size:13.5px;color:var(--txt)}
+.bar-track{background:#E9E9E9;height:9px;border-radius:5px;overflow:hidden}
+section.alt .bar-track{background:#DEDEDE}
+.bar-fill{height:100%;border-radius:5px}
+.bar-val{font-size:13px;font-weight:600;text-align:right;white-space:nowrap}
+@media(max-width:620px){.bar-row{grid-template-columns:1fr 78px;gap:8px}.bar-track{grid-column:1/-1;order:3}}
+
+/* PROGRESO vs PLAN */
+.prog{margin-bottom:22px}
+.prog-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.prog-lab{font-weight:600;font-size:14.5px}
+.prog-fig{font-size:13.5px;color:var(--txt2)}
+.prog-fig b{color:var(--txt)}
+.prog-track{position:relative;background:#E3E3E3;height:12px;border-radius:6px}
+section.alt .prog-track{background:#DCDCDC}
+.prog-fill{height:100%;background:var(--grey-m);border-radius:6px}
+.prog-fill.is-full{background:var(--red)}
+.prog-mark{position:absolute;right:0;top:-4px;width:2px;height:20px;background:var(--black)}
+
+/* TABLAS */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th{background:var(--black);color:#fff;font-weight:600;font-size:11.5px;letter-spacing:.04em;
+  text-align:left;padding:11px 13px;white-space:nowrap}
+td{padding:11px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+section.alt td{border-bottom-color:#DEDEDE}
+td.nm{font-weight:600;color:var(--black);white-space:normal;min-width:190px}
+td.hi{color:var(--red);font-weight:600}
+tr.tot td{background:#3A3A3A;color:#fff;font-weight:600;border:none}
+.tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 7px;border-radius:3px;background:#E4E4E4;color:var(--txt2);margin-left:7px;vertical-align:1px}
+.tag-new{background:var(--red);color:#fff}
+.tnote{font-size:13px;color:var(--grey-m);margin-top:12px;font-style:italic;line-height:1.5}
+
+/* NOTA */
+.note-box{background:var(--black);color:#D6D6D6;border-radius:8px;padding:24px 26px;margin-top:30px;font-size:14.5px;line-height:1.66}
+.note-box h4{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:11px}
+.note-box p{margin:0 0 11px}
+.note-box p:last-child{margin:0}
+.note-box b{color:#fff}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px}
+.card .big{font-weight:800;font-size:30px;color:var(--red);letter-spacing:-.02em;line-height:1.1}
+.card .unit{font-size:12px;color:var(--grey-m);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 10px}
+.card p{margin:0;font-size:14px;color:var(--txt2);line-height:1.55}
+
+/* FUNNEL */
+.funnel{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.fstep{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;text-align:center}
+.fstep .fv{font-weight:800;font-size:25px;letter-spacing:-.02em}
+.fstep .fl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-m);margin-top:7px}
+.fstep.on .fv{color:var(--red)}
+
+/* RESUMEN */
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:22px}
+.sum .it{display:flex;gap:15px}
+.sum .n{font-weight:800;color:var(--red);font-size:17px;min-width:24px}
+.sum p{margin:7px 0 0;font-size:14.5px;color:var(--txt2);line-height:1.6}
+
+/* PASOS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+.step{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px}
+.step .ph{font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:7px}
+.step .ph.g{color:var(--grey-m)}
+.step h3{font-size:17px;margin-bottom:13px}
+.step ul{margin:0;padding-left:17px}
+.step li{font-size:14px;color:var(--txt2);margin-bottom:10px;line-height:1.55}
+.step li b{color:var(--txt)}
+
+/* CIERRE */
+.end{background:var(--red);color:#fff;padding:78px 0;text-align:center;border:none}
+.end h2{font-size:clamp(30px,5vw,44px);font-weight:300}
+.end h2 b{font-weight:800}
+.end img{height:17px;margin-top:30px;opacity:.95}
+footer{background:var(--black);color:#8C8C8C;padding:34px 0;font-size:12.5px;line-height:1.75}
+footer b{color:#fff;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="swirl" viewBox="0 0 400 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M330 -40 C 110 120, 110 300, 240 400 C 370 500, 370 680, 150 840" stroke="#9B0000" stroke-width="7" fill="none"/>
+    <path d="M378 -40 C 158 120, 158 300, 288 400 C 418 500, 418 680, 198 840" stroke="#4A4A4A" stroke-width="2" fill="none"/>
+  </svg>
+  <div class="wrap">
+    <div class="kick">Reporte de Performance</div>
+    <h1><span>Renault</span>del Mar</h1>
+    <div class="per">Septiembre 2026 · mes cerrado</div>
+    <p class="lead"><b>306 leads</b> en un mes de transición planificada: se renovó el formulario de Meta con los modelos nuevos y entró un portfolio creativo completo. Las piezas nuevas ya aportan el <b>40% de los leads de Mar del Plata</b> en su primer mes, y Google Ads cumplió el media plan con <b>101,9% de la inversión</b> prevista.</p>
+    <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAggAAAA4CAYAAACYGQDnAAAfi0lEQVR42u2deZwdVbHHvzUz2QgQkxADyL7vGlkeIATZlLCEJewQkwBhV94TEOThLogsssgOAkIiEAhEw47siIRFQBANOwKBhACBJCQkIb/3xznjG8eZ29X33u6+M/f+Pp/7GTSnT5/uU12nTp2qXxkVQFIfYA1gJWBpYDDQExAwHVgIvA+8DfzTzD6lgZqBpGZgOaCpkyYGzDWzmY231UDBsro00D/qls5k9QMzm9NFn68nsC6wCvClqE+XB3rFJp8D7wCfAe8BM4CpwFtmtrgLPu8KJfQOwAIze68h+cXCypjY1YGtgB2BTYABwFLRMGg/4YuBecCc+HsReAJ4DHjOzD6oosCtAXw33rMzLAIuNLNXMhb+tYHjEsbSDFxsZs8X+JGOBH6RIB9vAzuZ2UcFjnMMsGmJ99kEvGZmZ2c8jnWBw4DeJRaqVvQC7gAmmZkcyvI7QF9Hv3mjCXjCzK4pcP6bgEuAXRMMhFvN7NgutEiuCWwBbBP/DoqGQc+kS6NenRU3YH8GHgaeMbN/dIHn3hq4Dmgp0WweMNzM/l7QGPeMa1wpHT4bOMvMPizRT1/gxDi36kRu5wHnmdnbOT2bAUcAGyU838w0nW4q6WpJ01QdTJV0kaQt4k620ofexnnfr+cwAd9wjmXPAj/SPpIec47z8IIVys2OMT6T8RjWl/RiCvl+RNKKzr43ljRPtYubCp7/9SR94hjnJ5LWr/HFsbekHSVNkPRelefpfUmTJe0naUCNPn+TpPHO5zmrwHGe5xjfx5JWSehnGUlvO/qaJKlXjnNwt2NMbzV5XEGSLgYeAkYTXNLVwFrA0bHfyZK+KalHBf153GwLne0qhfcenxf4rbbuWjw4LFrCRWGho81nGX5QKwHjCC5gD/4I7Glmb6WQl/k1vK4tLPj+o6OXMglLAQfX6MLYImmvKBv3APsQjmSriWWil+UG4EFJx0n6Qo29inWA3Zxt95O0XA3L/HyHx09O3bQ78IMcn2+BR6c2Je2EozAfBfTJaKA9gGHAncAtkrakgayVVTMwNsUlGwND6/RdrQjcCHzFecn9wEGNuI2qvf9lgX1TXDKywEWls2fYBLgZmAh8LafbbgicB9wXDZNawRinsQewIrB/HYn7iZL2raUBNZUQ6lHATSl2TZXCovV7j6QzJPVvqMfMsAHhfC2NnBwZz4LraXFaJu7GNnde8iww1sxmNESsatgLWDlF+y8Be9eKIS7pGOCuuEMsAl8FJki6ynvkleH7WK6MuTmwYO9lnugJnCdpw5o2ECTtCFxACJjJG32BkwjHDlvQQBY4JIUV34ptgC/XkXHQD/gN4PVoPQ3sbWavNcSranPQm3SerlaMjlkPRRuX1wIXAgMLfpXNced+j6RtCxzHnoQsjTTYGPhGHYn9csDltbJBbupAsFcHrijIOGiLrwHnxlTKBqqnuFYsc4fVjxDBXw/vaEBU7sOdlzwVjYNXGxJWVexCiLQuZ9e8fYHysxYwGTiwxt7nOsBtknYtyNgrJ9jZgLHVCGTvQtgcOKcWPLZN7SaxGfg56Vx6EAIx5hDSbmbEv3OpLAhvHnCamc1r6MmqYj9CfnU52KtoN2VOiuyiFMZBq+fgjW78WpoLmIcW4FBK58qXwtgiFGxMcZ6A/1iqMywmBJLNjX+rFSj6GlBEKuTOQLkZJtvi9+R1F4wmxP4VivZ5qDsSomu9eCVaylOi0H1MyMv9IoEfYUVCsMzGBO6ENK62C8xscmM9r6ryWjIKXrlYNhoYZ3fT99MbOB9/YNRrwEgzezOnIU6Phrjl+FqagXcLmI5NgB0quH4ogTtjSo7ysxwwnvKP4t4DHgCeB14GPgE+IhBEWfz+VgLWA4YAa6Y0oN4FDs2aB6aD99IUjb2WMrvoDRwEPFJH6tqA0yS9YGYPFW4gRIv9COdu4VNChOz5nQRkvR5/TwOTomdiBYLL8IBoLJTCY8BpjSW96tiNyoNOx0i6zMxmdzPjoAdwLn436GvAvjkTuZwC/L4ARTU/57kwQuxBJWnPfQnn7lNyGnNf4LK4GUqLp4CLgTu97IHxjHpDYATB27VKwiXzgaPN7IkCPq//ArarsI8Rks6ssxiffsAVkrZPkTKdmYCvIWmWgzxhXmTgK3uXJmlPSfdL+ryD/j+QNKSMfrd2jH2BpKE5vMsdnEQgw3Oc3x6S7qsSIcvBOcvm9Y4xPV7JDkfSz1M8/0uSvlLF5xsi6SPHfUfUiadrzagHqkEctGpOYz69jPG9JGm0pKUqvPfykk6S9GYn91kk6TsFzaVJurJKeudHOY77LMd4pktaOaGfgZJerfC5/1DNWLyo7yY77vtKW/fUkGixJOF8M7uu7O2I2XwzuxX4JsFd/ULbsQM/NLNnaKDa2Ar4usMz5HGXHxrd8d1hMWoGfgb8r/OSqYSYg2cLGG69pJkeQDiiLIVpBBd8KSwDjMxBhoYB/5PysuuBbczsmkq9cWY2zcx+SThWuZL/jP36tZldUNBcrkZIVU3ybrzh6OtbtcoQmTF2A35YxI2b2rmBkjADuLQaNzazhWZ2c1y0ziQE4UwALm+s5dW34gkZCEkLzATgDKex0V2Chk4muO49mA58y8z+2pCqzGR1kHNR/wGh1oVnURmY4Xj7E45D0xjMZxBiV6oa22Fmb5rZWEKcUWvfN6WQ7ywwkhBDUQpPRgMrid1vNWqE46IA/I+k3Emj2i4YKzjav1btaG0z+8DMTgJ2Ak4ys4U0UG2sRfDYlMICAp3wjcA/E9q2EOiXu/SONpLYeN2WM6JSf6IhTpliZ0KF2JJ6CLgF+C3JtOarO3awlWAUwfuaxjg41cwyo1k3s3HAHsBVwHFFZYJFY+8gR9PxZjYpGgqJ71vSEnX4XfQipP1vUJSB4OEFn5GhUN+fYzR4veEQkjNI/gI8HKs2/s7R507kx7KZlXFwHr5AuBnAgWZ2b0OUMp2TXoRA6STcYGazgAcJ1WELWVQiDfR3U1xyEfC/WRoHbfTpE2Z2aLW9FCmxk8PYexOYFP/7apJrG2xBndK+E7JYrsizvkZbA8GTOrVSdFc30HWU7mB8qauXtfHejCekrJZCf+BbXfSd7A/8Cl/a1bvA/mZ2X0OaMse2hNTEUviEUCoYM5tPYLtMWlQ2JzCBVhv7EFK5PfgT8H0zW1wPEympJ+ApvX2zmU2P/z0JSCIbMwLte3OdfiObR09CLt7btjf51NF+RYK7uoGug72BpEjuV2lznmtmLwC3Ofo+IO6iuppxcDmB9zwJHwOjzOyBhhhlPi/eXPnJhEDRVtxCOHIohWbgiGpubmJU+Rhn80+AE7pbarDD2PtqQptZ0WvQqnc+IARvJmF7/MXTugruAN5xth1N+qDYig0Ez+AGUh5dZgPFKN1ehOOFJNzYAZ9FR9HQHRmMe3eh97F7NA48aWWzgSMaxwq54cuEYm2l8DlwtZmpzaLyIcHjlYTtSBcrkISh+Gmgx5nZ4/UykdEQO9xh7N0HtOcRGU8ghyqFJemi3ssSeJgQMO09fvqRpMzpxNsaCC85rzlG0rcb+qxLYJhDic0mumzb4XECYVUSukTKY+S/uCSFcTDWzG5siFBuGEVyJsCj8fcfBm7cjZbCUvEe1cIu+EjlZhNiD+oJG5FcYEnAlR0cubyEz3u5j6QVutE76xmDS71ZgksBF2ZNfd/WQHjKeU0vQknK30namAZq2Yr3uGz/0JFxGM93f+tUBrvW+Lv4OsF1uZxToY9pGAe5zs/KBO6DUlgM/NbMPuvg3/4O3O5cVFaswniXxh/TcAfF1D4oEmPiLr8UptABdXL0Dl0GLEq4fjmHzHQltK7FJxOCbz1YB7g4y4KGbQ2EFwj0yN7rDgAekHSLpOGSvthQdTWFzUmuaLeI4LLtLHDqVgInfJIsHBapimtx8fkywW3pKVA1PxoHExvikyv2I9RvKYVXozzSyaJyqXNR2a8K412OUA8hUfwIGReL62UiowHmWbivNrO5nfzbk4Cn/sAhRZf1rjbMbA6Bs8ab0bcr/lTt8g0EM3u/sw8wwc2xJ4Ef/lFJ4ySNkrRSDZdpntdN7pGEw4CkOXiEcPbVmbB+SCh7nITt8BFt5a2sNgJudhoHi4Dja9w4mE83Q2TGG+1oem1MbaQKi8pSFQ77q/gyYN4jZC/UEw5yGHtvABNL6J0FBA6HJMNqHQLfQ7dCLBt/DKGSpwfHS8rEm9JeyC8FDnZMcEdYM/4OIkTtPh/58Z8i5Cq/3ja4qCA0EcrA7pjxfVYvWOmuRqDnTNrdXOsgphoHHEegre0MPaKSf7SGFp61o3GwhqP5HOB7ZnZJjeuOAyRtmMN9FkTZmJHDvb5BMp/GTOCGBKX6maSrSfaarRV3XddXMGZv2eIpwId15D3wpj6PixkLpXAb4ehznYR2YyRNiEei3clIuF3S6fiKFrYAv5L0kpk9nZmBYGYvSzqVyumOlwa+Fn8AHwB/k3RnXESeiFZi3mgmVInr7hgFDEpo06nLtp1MvCHpVsd7Gy5pjbxLyXaiqJYnBF6u6bxkKnBNF5jXPM9c7yVDYrQ4Tz2BIx1N73TK1e1xUVkrQQccJmliBTpoDWe7FyolRZK0DoHltprkSq3pnv8ws2lV7HdHh7E3y2Ocmdknkq4i0PCXwlYE7ozuWAr6bEJ2z76OtssS4hGGRc9vJh4ECMQjqwLfr+KDDiSkBQ0luEmnSpoMTCyo6E13tuIHAh7O7mvN7GNnt9cQPEOl2OgGEbxPPy74+VeOu81NU1w2hFCs6dSGBP3Lo5LHufmWBGa8UlgIXOHcdc2SdA1wekLToYQjsUfKkK8mSnvT2uKNKryj4wmpylnMx5FR31fju+uBjwXzdjN70dnt9fH5ByesYUdK+lN3i/UwswWxCufa0VBIwmbAmZKONLNF1RhDUweDWhwV5Wnx46w2eseHPRV4TNIdkvaq4ZiFroY9SSazep90LtYp+M5SD4r860VgQaQgvZ4QoJn2OzihiGIodY5DSCaseiTKnxfjCEW1kjZGx5RJnNQD6OtZM0muNundxDXFv9X+VZONcEtg64Q2i9IYJGb2NqGAXBJ2oQvTvie8g+kETon3U3xTx1Tr/k2dDGqxmZ1KcFX/M8Pn70PI1Z8I3C5pq4bOrNiKP9TR9I40RwHRTXoxyZS2awDDC3r8QYTApi3KvL41fXe9hiTlIqvrkxwnA/CbNEcBZvaWc1HZifJZYT2xVPMIQYoVv6osp6GKfR1Gcl2TP+PjVmmL60gO1uuHryhUVzUSngBOwHfMZMDpknbIzEBoM7DrCeWYLyCZ3apSbAvcLemH8WyygfLeYRK96QKcLtt2uJ+QCptowRaU8rhO9J5UgsGEc7ylG6KUOQ4GvpDQZiq+ks7tMZ7kTKJ++FhGG0g29tYlVOFMwjWd8FiUwtP4eAEOjnVnuquRcG1chz1YArg0BqtnZyDEgb1uZscRXEhnkC3pxxLAT4DL6rSkZzWs+CTj6k/xo0sroJ/gI07ajOTS0rWMbYBfNEQp0wVlWeBAz0KfkNrYGZ50Lir7lbmoeI4m+hACx+rF2BuQ0OZlQjp8Wr2z2LmhWYFumPLYDj8m0FN7sDqBabGidbQpxUT9w8y+TwjwGR4Xi9fIxgU2GrhIUgsNeJXuEILbNAm/qSAl6EZCdcNSaCGU1621qp/zAO/u5ShJh9axODU7F8FysS+wUkKbmXRMAZ5mUUlyya4MjEj7qeGLzTJ8sQpdXe8MBkZ6dIcjtbEz3E8oR5/0vo/uzhvLuEk7Gn/w6zAqDBpvKWOQ7xMqqk2WtAzBpb0ZIZ95bUIZ4Gq4mEcTXNrnVPk9L6C6KUOdKdi8j0lGk1xnwEtJ29ncvy3pJuA7CU13IWQRPFFDxsGhBH6P85zK/SxJL5jZlBrSEbOjkZO18TWXZFbCcheUpfERI00wszcquNW9wLNAEh38WElXm9k85zewQNJM5xhWqsIrqzVDuz32J7nk9Uf4vI+dvfPZMeUx6fh0g7hJuqUbGwkvSToKuIlkOmuA4yQ9a2a/y8VAaDfYmcA9wD2STiNQkA6JH+VmwCaE4LFya1efIuleM/trld7vIuDEqDiyqqe9OC6OZ+doxa9Icq6sgKvKdNm2xRVxsS21O+pDIEypBQNhIXCkmV0fYyM2du54+gNXStqhTb36onEKgUAmy1rwFmX4nYz6357kqoqf0KYMcJm6aU6bRcUSFpVhKReVd53t1pTUVGH63WfAp2Vc1ydr40KSt6riTVXgR7mBkPJYqnR9KxHebQXx7ORlJNwl6WfALx3NewLnSvqbmT2Xq4HQbtACpsXf7fF4oD8hqnznqBjWSNntAELKxhHVkmngSTP7c8YfTt5W//4kn3cuAtaPgtVUwftrjgo8yX06QtLZFe4CK8XnwKkxwAczWyjphLgoeEr/bhA9CWMqJbypEqYV/D4r/S6a8ZWLXwjsLWmPCha5xQT+lc8T9FwLgTjp9ynm2Fv5dpO4UM+t4LV9D/hhymv6A3cBq2Q8pTs4dvUAgyX9pIL1pvUY23M02lrWewrdG2fHd++pLfJF4IpIopTqmCezM/5I1PA+oVrgH+JZ1bZxwU+TzjhM0uAq7uLyiLDPLYpfUj98ZWxb6ZDzwrLRcDmjoA9oEXCKmZ3VTi5nRBfd7XEBScLBhKDO82tAKTTTtbEpIYYpCQOBk3Ic13ZxMfcuKl6P5uqEok5PVqBHPyEln4Kkz8j4GDV64w53Nt89/vJAT+AISU925yJZZrZY0n8T2GK/6vz2zpc0ysw+l3yhg005PtB0M7uBQMd5NIF+2YMVSceKV28Yhp8bPm+MjPzsRRgHJ7c3DtrI4hRCWVXPV2LAaZK+0RC1inEopdk4i0IvQmCq11vxd5LJmFqN8j0LeJ48DMmNo2FVi9idguvh5LSmvkdgw/Rung8Cvt1q49WUgdDmoebHojjD8Z/lbdLQrR1a8S34uOyLwnr4Miuqic+Bk8zsnAQ5vJJA/uRBX+DXklZpSF3ZsromtZ2GNpzS59ttMRN43Nl21+jl6244LBpWtYgBdGPipHZ67EnCMZQ3qPhnknbCmdHVVOCDPQb8zPlgK9FAR/ga6WmF88bh8ew5L+PgRDP7lbP9D/CX412LEOzToAQvDwfgr2FQBPrjC15tPT711nHYkG6Wny+pSMZUL0bGLLt6wHXAr51tlyQQLq1d0wZCxM343CMrNPRrl7PiW7E5yRzt1cAi4FwzOzeFkfoRcCx+F90ehEyCBtItKAMJsRy1jgPjWD24BfAWO/teQUdtWWF/kqvFFo1VCenW9eBFUNzs3Ou8ZM1ouNa2gRA5Fd5yNG0QJv2n0l2PUNe+1tE7GjJZ42+UUYE0VhM9Ab+L7iRJwxsSmAoj8JfeLhJr4asPgZm9Tkg59WA9QsxLd9A7S+NLbSx83SQEK/aohw/MzOYSYvter2a/TZ0IwamSTsupJoKndvUCGmiPkSRz2dcKdovFebLEvHJLnJrZOHwEShACzy6QtE5DBF0LSh9gTBca8uEp9N41KQzL4ySN6AZTuj/p09WLwqaEoPi6QOSaOIrkOiRutHTwQY8CfhT/bU1J341lN7NQHj2dwvZGQ9X+23tbFl8QzkxCNc6sPEUiBPAlVcVrZc87MeMdQyX4Mf/PxJaElQn1QnY1s9kNiSyJocB/Odq9DswiO3IfEYpxLZ/QbhMCZ8udjj4fBO7G58ruRSigM8PMHumKEympd9yYJM3RR8CbWQ6FkM64NskcF4dIurtGeEzyMBLulvQDqkTU19JOALYHzm3z/+8DrC3pVDObnMHzbEBgX0zCmzTQFiNIpjddTEhp+X3GYxkUFWVSBPj+ks6JqTm1+GHNlfRt4AF8MS9DgZ9GA1oNkexwQWmKO5qkBeVdAunOuxkPaTsCL0spg7kHMEbSXUnzamaLJP0i9usJXl0GGC9prJndneFzfk42qY7bEor2JeFMsucN6QNMIjm+aRiwEfBMHX16FxDIog6q5se8jqQ31DE+k3RRNdO8JDVJuk4+7Ojob2tHPwskDc16diTt4Hyu4WX0vaSkpxx9P5dX4RJJpzuf97gy+7/e0ffjVXqWPSTNdz7PIkkjq3DPIZI+ctxvny5mIGwk6WPHc52f03j6SHrMMZ45kr6SQo+dp3SYI+n4LI5wJX1J0qWSFjrGMTZFv82SJjr6nCZp+Zzmc6zzfV9YRt9nOfqdLmnlhH4GSnrV0dePqvxuBkl6UpXhlabY2WDCeVpnD9uTEADxiKSTKxWAGDjyE6eF80/8zGX1gO1ILkADoe7CpzmN6Xf42N5GxyCnWnbRTcLHcU7cpZ0vaeOchtfVmOEOJxwvlYK3jHg15nYeMM7RtC9wqIc4KbL1nZ5SR/UluIAnSdqyGs8maVlJxwIPE6jpqx3YvSG+Mu43mdm0nORrIj7v8ghJdZUqHxMAjgJmVNJPU9xlXozvnHAF4BfAo9HC2jgW7PAKcYukzQjpjafiO2/8Y6UP2V0QXbaeuhTvABNyFMYX8FWJ/DJdI2jo58Ctzrb9gUtSpMdVgn5xR5LnbxlJX4iyl0ZWV8DHIvgQoXhaXpiAL6ZpP5zp1WY2g3CcNyvlWIYBd0cP2TfTGs+SlpK0qaSzCLwMvwZWy+i9jSW5/spc4Noc9c6HToNvWeDAelsvzOwp4L+pgHa7hUBWtFfK61YlpIYdBzwb3btTgVfj4rQAeJtAyjCIEGewAeEMawd853UQinNc2Tjj/Rc2i+8wCTea2bs5j+1aQmxEKbepEaLEb61lnvRY1Ok7wLqAJ1thU+BMSUea2cIMh3Y6gYchz2JgTYTiRAfgyzhqxYEkBwQCXJanLJjZzFiyPClgdhDBw3mGs9+Ho8xcQTpukiUJmQH7An+V9CihzP1UAj/Hx9HwGBwX6OWjEbAhgWNkowq8BS6jL1aL9RyHPpyzsQcwnuDdTuKZGCnp0ipUs+1qRsL1koZQZoB4C6Fcc7nc1T2icmytlbAwLuqLCVSOzXHB6JWwcJRadKbQQCtGOYyrOQSXf954EHie5OOPraK36s81/mG9HV22v3fsnCCk8j2Ln9GsHAyOv7yxgBRBb9Gr6InNeCZ6EPLGeIL7Ncn7eVCaRcXMrpPUl5Aym5bArAn4Svy1bo4WENIoF0X92VyBLm2PqfiLSHm8KQJ+k3e2gJn9XdIDjk3uuoQMpRvqcN34OcF7m7qeTFOMph2Gn4UpyWBYCuhHKDE5MP7vcgT6FeCn3bkiVxpELvu9HU0fAP5SwII6H7ja0XQJ4JAuYn3fR4iVcTUnZDVs0w3FL63S3wNfAbHxZjangHl9zqnv1idlLREzu5TgWa2Uu6U3IX5jQNSlX6hAl7bHbcAwM/uLQ+/0wVcF9nnCcXARuJxkPopW4qS6I92LFUGPjmtqaqsVM3uZcF74S+DTGnimmcDhZvZOwzT4F/YhmctewOUFHslMxMeMuVc0eLoCzsV3zklU4hdFl2y9GrI9CVUbk45Bphe8m7vKYfiUtaiY2WUEaulaS+n9iMA2uk9kgvRg77j7TsK1ZvZxQc/1oHNTtCW+cuPd0Uh4NRoJqXhbmtp0MNfMTgZ2xl+IJAtMBw42swcaNsG/lO5A5677OcI5YFFC+B4hNzkJAwhn2l3hw1oEHB/frQfrEyo/9qhTcfUq4RsK3gD8Ed95eVmLipndRCBcur9G5uUuYHszOyN6+zx6pwfhWDMpVmEacGOB3+hnhIJFSehJIE6yevwwzexeQs2G9AZCm04eikbCkcDLOT/D88BeGZOIdEXsgS86eVx0JxWJq/GVEh2dU+R/NT6sGdH6nuW8ZHdCEG+9GbJGONtPWlDmOhV6lnM6H59nqCdlUkWb2YuE2g4nFOhNeIIQD7KbmaUlCxoKeI7MJmXFtpsCt0ZDJQm7EWpj1CsuxO8R7fhDNrM50U22FeE87cmMB/0h8Kto4T7WsAf+Ten2id6DJKv3PWojAOevcbeShFXxpcHVipHwGKHgjvc8/hRJO9eZuK6NL431HgqIk+kAE52Lyi6S1ipTbj41s3OiLj07R0PhcULswPZmNi5tnZKY1jqG5AyJeYTjmqK/z3fwpSYvHb0idYkYRHo88FTZBkLbnZOZXUAg59k+CsI/qCCvsh1eI0R9b21mx0dyh3LhSdnpQT4VLL338ESG74iP3vSGWojZiAI43tn8aEn9nPOWhDzKXl8efx4sCVwjaQOnvPSuYb3SC19q5bEkp5sBXF0Lqctm9haBejkJ/YFj03JBtLvXq2Z2IrAF8D3gafyFnryYSkiz3DYaBr+tIAh0A0LcUxIepHZojK90vtMxkaejUp3T2/FdmFM3teQo9zMIJGZJqfC9WpwdziGcpd0f65pvQOB6HkoIYBlAiE5fIi567V/aIkLw42xCjMHDUbCmVJGb/x3gEkqzzS0i8DNkjTcdY2nGF1XaF7g0wShbFNvUCiYDp0XFmrQQ9CPkepfC7QSyrMUlFtjXcviwFAuhzIrjlkPJbCTpxYRsnOnRUO7r6DP3dTQqkk8Tdpwt8Ru8uMQzWJzHe2vo+S6I348lvINpcT4/q1CG3gDOivTSm0WD4evR+zIgGpZJi9NCQjrzxwTumQeix+CZSB5UDQzEF8g5voYyzZ4nBGGu5tC9AxPWgocIx0ul+plNMoPsvGi4DCrxXTQBuXrOzeyZSLW9c4lxzaw4WENSc5yQZQk52r3j3+Z44+nxJb1LYDB7p0F81EADDTTwb3p0aUJV1JUJZEitpEi92iw070bDYHrchLxaRYOggQb+A/8HwzqRp/1I/3UAAAAASUVORK5CYII=" alt="ShakeAgain">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">Qué detectamos y qué proponemos</div>
+    <h2>Cuatro oportunidades del mes</h2>
+    <p class="sec-sub">Los puntos de trabajo que identificamos en septiembre, cada uno con su propuesta para validar con el equipo de Renault del Mar. Hacé clic en cada uno para ver el detalle.</p>
+
+    <details class="opp" open>
+      <summary><span class="no">01</span><span class="sum-t"><h3>La renovación del formulario y de las piezas reordenó la captación</h3>
+      <span class="sum-m">De 1 pieza concentrando el 98% a 7 piezas aportando leads · propuesta a validar</span></span><span class="chev">⌄</span></summary>
+      <div class="body">
+        <p>En septiembre se ejecutaron dos cambios pedidos por Renault del Mar: se <b>reemplazó el formulario nativo de Meta</b> —que venía operando sin cambios desde hacía meses— para incorporar los modelos nuevos, y se <b>renovó el portfolio creativo completo</b>, con piezas de Kwid, Kangoo, Arkana, Kardian y Boreal.</p>
+        <p>El efecto es visible y era esperable. En agosto una sola pieza concentraba el <b>98%</b> de los leads de Mar del Plata; en septiembre el volumen se reparte entre <b>siete piezas</b> y la principal baja al <b>59%</b>. Las piezas nuevas aportaron <b>92 leads</b>, el 40% del total de la zona, en su primer mes de vida.</p>
+        <p>La contrapartida es que un formulario nuevo y piezas nuevas reinician el aprendizaje de la plataforma: las frecuencias de las piezas de septiembre se ubican entre 1,1 y 1,9 frente a 2,2 de la pieza madura, señal de que todavía están ganando entrega. Es la lectura que explica el volumen del mes. <em>Es nuestra interpretación a partir de los datos de entrega, no un dato medido por la plataforma.</em></p>
+        <div class="prop"><span>Propuesta</span>Sostener las piezas nuevas el tiempo necesario para que completen su aprendizaje, concentrando presupuesto en las de mejor costo por lead (Kwid y Kangoo) y dando salida progresiva a las que no levantaron volumen. A validar con el equipo.</div>
+      </div>
+    </details>
+
+    <details class="opp">
+      <summary><span class="no">02</span><span class="sum-t"><h3>El sitio en celular: la mayor oportunidad de conversión del mes</h3>
+      <span class="sum-m">60,4% de los clics llegan desde celular y convierten 4,7 veces menos · propuesta a validar</span></span><span class="chev">⌄</span></summary>
+      <div class="body">
+        <p>En Google Ads, el <b>60,4% de los clics</b> de septiembre llegó desde celular (1.708 de 2.827). Sin embargo, el celular convirtió al <b>0,47%</b> y la computadora al <b>2,19%</b>: una diferencia de <b>4,7 veces</b>. En costo por lead, celular cerró en $132.167 y computadora en $40.407.</p>
+        <p>Detectamos una causa probable y concreta: en la versión móvil del sitio, <b>la burbuja de chat se despliega y cubre la navegación</b>, lo que dificulta avanzar y empuja al usuario a abandonar la página. Sobre un tráfico mayoritariamente móvil, el impacto se multiplica.</p>
+        <p>Es la oportunidad más grande que vemos hoy: el tráfico ya está llegando y está pago. Mejorar la experiencia móvil trabaja sobre leads que hoy se pierden después del clic, sin necesidad de sumar inversión. <em>La relación entre la burbuja de chat y la caída de conversión es una hipótesis de trabajo nuestra; la diferencia de conversión entre dispositivos sí está medida en Google Ads.</em></p>
+        <div class="prop"><span>Propuesta</span>Revisar el comportamiento de la burbuja de chat en celular y la navegabilidad general del sitio. <b>Desde ShakeAgain podemos encararlo</b>: hacer el relevamiento de experiencia móvil, cotizar el trabajo de mejora o ejecutarlo directamente, según prefiera el equipo. A validar alcance.</div>
+      </div>
+    </details>
+
+    <details class="opp">
+      <summary><span class="no">03</span><span class="sum-t"><h3>Plan Rombo sostiene la búsqueda y Google cumplió el plan</h3>
+      <span class="sum-m">101,9% de la inversión prevista y volumen de leads estable · propuesta a validar</span></span><span class="chev">⌄</span></summary>
+      <div class="body">
+        <p>Google Ads alcanzó el <b>101,9% de la inversión asignada</b> en el media plan y sostuvo su volumen: <b>33 leads</b> frente a 35 en agosto, con un costo por lead de $61.742. Es la línea más estable de la cuenta.</p>
+        <p>Dentro de la búsqueda, los términos ligados a <b>Plan Rombo</b> concentran la demanda: “plan rombo” sola explica $192.503 de inversión con 413 clics y 5 leads. La campaña genérica nacional aporta <b>25 de los 33 leads</b> con el mejor costo de la línea ($52.999).</p>
+        <p>Las dos campañas de Performance Max permanecieron sin actividad durante el mes, lo que concentró el presupuesto en búsqueda, donde la demanda es explícita.</p>
+        <div class="prop"><span>Propuesta</span>Mantener el peso en la campaña genérica nacional y evaluar un refuerzo en los términos de financiación y cuotas, que vienen mostrando el mejor rendimiento relativo. A validar junto al objetivo comercial de octubre.</div>
+      </div>
+    </details>
+
+    <details class="opp">
+      <summary><span class="no">04</span><span class="sum-t"><h3>Planilla de seguimiento de leads: lo que falta para optimizar por resultado</h3>
+      <span class="sum-m">Volumen recibido por región y plataforma · pedido al equipo de Renault del Mar</span></span><span class="chev">⌄</span></summary>
+      <div class="body">
+        <p>Hoy optimizamos con lo que informan las plataformas: leads enviados. Lo que todavía no tenemos es <b>qué volumen llega efectivamente del otro lado</b> y cómo se comporta cada origen una vez que el asesor comercial toma el contacto.</p>
+        <p>Para eso compartimos oportunamente una planilla de seguimiento que contempla el volumen recibido <b>por región —Mar del Plata y Nacional— y por plataforma</b>. Volvemos a ponerla a disposición: con esa información podemos mover presupuesto hacia lo que efectivamente genera operaciones, en lugar de hacerlo solo sobre la señal de plataforma.</p>
+        <p>Es la diferencia entre optimizar por resultado de negocio y optimizar por lo que se ve en el panel. Con un mes de datos cargados ya podríamos empezar a ajustar.</p>
+        <div class="prop"><span>Propuesta</span>Retomar la carga de la planilla de seguimiento de leads por región y plataforma. Desde ShakeAgain reenviamos el archivo y, si ayuda, lo simplificamos al mínimo de campos necesarios para que sea rápido de completar. A validar con el equipo comercial.</div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-kick">Septiembre 2026 · Google Ads y Meta Ads</div>
+    <h2>Resumen del período</h2>
+    <p class="sec-sub">Mes cerrado, comparado con agosto. La renovación del formulario y del portfolio creativo definen la lectura del período.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="lab">Leads del mes</div><div class="fig red">306</div>
+        <div class="note"><b>33</b> en búsqueda y <b>273</b> en social</div></div>
+      <div class="kpi"><div class="lab">Costo por lead</div><div class="fig">$12.460</div>
+        <div class="note">Promedio ponderado de ambas líneas</div></div>
+      <div class="kpi"><div class="lab">Inversión total</div><div class="fig">$3,81M</div>
+        <div class="note"><b>95,3%</b> del presupuesto aprobado ($4,00M)</div></div>
+      <div class="kpi"><div class="lab">Personas alcanzadas</div><div class="fig">126.183</div>
+        <div class="note">En Meta Ads · frecuencia promedio de 2,2 impactos</div></div>
+      <div class="kpi"><div class="lab">Piezas con leads</div><div class="fig red">7</div>
+        <div class="note">En Mar del Plata · <b>eran 3</b> en agosto</div></div>
+      <div class="kpi"><div class="lab">Clics totales</div><div class="fig">6.805</div>
+        <div class="note">358.157 impresiones combinadas</div></div>
+      <div class="kpi"><div class="lab">Leads de piezas nuevas</div><div class="fig">92</div>
+        <div class="note">40% de los leads de Mar del Plata, en su primer mes</div></div>
+      <div class="kpi"><div class="lab">Inversión en búsqueda</div><div class="fig">$2,04M</div>
+        <div class="note"><b>101,9%</b> de lo asignado a Google Ads</div></div>
+    </div>
+
+    <div class="note-box">
+      <h4>Nota de lectura</h4>
+      <p>Septiembre fue un <b>mes de transición planificada</b>: se reemplazó el formulario nativo de Meta para incorporar los modelos nuevos y se renovó el portfolio creativo completo, ambos a pedido de Renault del Mar. Un formulario nuevo y piezas nuevas reinician el aprendizaje de la plataforma, por lo que el volumen del mes se lee en ese contexto y no como una medida de techo de la cuenta.</p>
+      <p>Las dos líneas de trabajo captan con <b>formularios distintos</b>: Always-On usa el formulario nativo dentro de la red social y Performance exige completar un formulario en el sitio o iniciar un chat de WhatsApp. Sus costos por lead no son directamente comparables entre sí; cada línea se mide contra su propia historia.</p>
+      <p>La serie de Google Ads es comparable <b>desde julio</b>: hasta junio la cuenta registraba un único evento de conversión con volúmenes muy superiores, y desde julio se miden por separado los formularios del sitio y los contactos de WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">Media plan</div>
+    <h2>Avance contra el plan de septiembre</h2>
+    <p class="sec-sub">Inversión y leads de cada medio frente a lo previsto para el mes. La marca vertical señala el objetivo del media plan.</p>
+    <div class="prog">
+<div class="prog-head"><span class="prog-lab">Inversión en Google Ads</span><span class="prog-fig">$2.037.502 <em>de $2,00M</em> · <b>101,9%</b></span></div>
+<div class="prog-track"><div class="prog-fill is-full" style="width:100.0%"></div><div class="prog-mark"></div></div>
+</div>
+    <div class="prog">
+<div class="prog-head"><span class="prog-lab">Inversión en Meta Ads</span><span class="prog-fig">$1.775.273 <em>de $2,00M</em> · <b>88,8%</b></span></div>
+<div class="prog-track"><div class="prog-fill" style="width:88.8%"></div><div class="prog-mark"></div></div>
+</div>
+    <div class="prog">
+<div class="prog-head"><span class="prog-lab">Inversión sobre el total aprobado</span><span class="prog-fig">$3.812.775 <em>de $4,00M</em> · <b>95,3%</b></span></div>
+<div class="prog-track"><div class="prog-fill" style="width:95.3%"></div><div class="prog-mark"></div></div>
+</div>
+    <div class="prog">
+<div class="prog-head"><span class="prog-lab">Leads del mes</span><span class="prog-fig">306 <em>de 646 previstos</em> · <b>47,4%</b></span></div>
+<div class="prog-track"><div class="prog-fill" style="width:47.4%"></div><div class="prog-mark"></div></div>
+</div>
+    <p class="tnote">El plan preveía 646 leads a un costo objetivo de $6.192. Septiembre cerró en 306 leads a $12.460. El mes operó con el formulario y las piezas recién reemplazados, por lo que el plan se formuló sobre el escenario anterior a esos cambios: es una referencia útil para recalibrar los supuestos de octubre con datos reales.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-kick">Evolución</div>
+    <h2>De abril a septiembre</h2>
+    <p class="sec-sub">Inversión mensual por línea de trabajo. El número sobre cada columna es la inversión total del mes.</p>
+    <div class="months"><div class="mcol">
+<div class="mtot">$5,46M</div>
+<div class="mstack">
+  <div class="mseg mseg-m" style="height:36.8%" title="Always-On $2,01M"></div>
+  <div class="mseg mseg-g" style="height:63.2%" title="Performance $3,45M"></div>
+</div>
+<div class="mlab">Abr</div></div>
+<div class="mcol">
+<div class="mtot">$4,25M</div>
+<div class="mstack">
+  <div class="mseg mseg-m" style="height:21.4%" title="Always-On $1,17M"></div>
+  <div class="mseg mseg-g" style="height:56.4%" title="Performance $3,08M"></div>
+</div>
+<div class="mlab">May</div></div>
+<div class="mcol">
+<div class="mtot">$3,57M</div>
+<div class="mstack">
+  <div class="mseg mseg-m" style="height:21.3%" title="Always-On $1,16M"></div>
+  <div class="mseg mseg-g" style="height:44.0%" title="Performance $2,40M"></div>
+</div>
+<div class="mlab">Jun</div></div>
+<div class="mcol">
+<div class="mtot">$4,41M</div>
+<div class="mstack">
+  <div class="mseg mseg-m" style="height:28.7%" title="Always-On $1,57M"></div>
+  <div class="mseg mseg-g" style="height:52.0%" title="Performance $2,84M"></div>
+</div>
+<div class="mlab">Jul</div></div>
+<div class="mcol">
+<div class="mtot">$3,80M</div>
+<div class="mstack">
+  <div class="mseg mseg-m" style="height:33.1%" title="Always-On $1,81M"></div>
+  <div class="mseg mseg-g" style="height:36.5%" title="Performance $1,99M"></div>
+</div>
+<div class="mlab">Ago</div></div>
+<div class="mcol is-now">
+<div class="mtot">$3,81M</div>
+<div class="mstack">
+  <div class="mseg mseg-m" style="height:32.5%" title="Always-On $1,78M"></div>
+  <div class="mseg mseg-g" style="height:37.3%" title="Performance $2,04M"></div>
+</div>
+<div class="mlab">Sep</div></div></div>
+    <div class="legend"><span><i style="background:var(--red)"></i>Always-On (social)</span><span><i style="background:var(--grey-m)"></i>Performance (búsqueda)</span></div>
+
+    <h3 style="margin-top:46px">Leads de la línea Always-On, por mes</h3>
+    <div class="months" style="height:210px;margin-top:16px"><div class="mcol"><div class="mtot">358</div>
+<div class="mstack"><div class="mseg mseg-m" style="height:71.6%"></div></div>
+<div class="mlab">Abr</div></div>
+<div class="mcol"><div class="mtot">285</div>
+<div class="mstack"><div class="mseg mseg-m" style="height:57.0%"></div></div>
+<div class="mlab">May</div></div>
+<div class="mcol"><div class="mtot">272</div>
+<div class="mstack"><div class="mseg mseg-m" style="height:54.4%"></div></div>
+<div class="mlab">Jun</div></div>
+<div class="mcol"><div class="mtot">350</div>
+<div class="mstack"><div class="mseg mseg-m" style="height:70.0%"></div></div>
+<div class="mlab">Jul</div></div>
+<div class="mcol"><div class="mtot">500</div>
+<div class="mstack"><div class="mseg mseg-m" style="height:100.0%"></div></div>
+<div class="mlab">Ago</div></div>
+<div class="mcol is-now"><div class="mtot">273</div>
+<div class="mstack"><div class="mseg mseg-m" style="height:54.6%"></div></div>
+<div class="mlab">Sep</div></div></div>
+    <p class="tnote">Los leads de búsqueda son comparables desde julio: 24 en julio, 35 en agosto y 33 en septiembre, con un costo por lead que pasó de $118.332 a $61.742 en el mismo período.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">Línea Performance · Google Ads</div>
+    <h2>Resultados por campaña de búsqueda</h2>
+    <p class="sec-sub">La campaña genérica nacional concentra la inversión y aporta la mayoría de los leads de la línea.</p>
+    <div class="tw"><table>
+      <tr><th>Campaña</th><th>Inversión</th><th>Clics</th><th>Impresiones</th><th>Leads</th><th>Costo/lead</th><th>CTR</th></tr>
+      <tr><td class="nm">Búsqueda · Genérica (Nacional)</td><td>$1.324.979</td><td>1.869</td><td>27.988</td><td class="hi">25</td><td>$52.999</td><td>6,7%</td></tr><tr><td class="nm">Búsqueda · Marca Renault (Mar del Plata)</td><td>$403.878</td><td>565</td><td>8.822</td><td class="hi">4</td><td>$100.970</td><td>6,4%</td></tr><tr><td class="nm">Búsqueda · Competencia (Nacional)</td><td>$308.645</td><td>393</td><td>24.459</td><td class="hi">4</td><td>$77.161</td><td>1,6%</td></tr><tr class="tot"><td>Total</td><td>$2.037.502</td><td>2.827</td><td>61.269</td><td>33</td><td>$61.742</td><td>4,6%</td></tr>
+    </table></div>
+    <p class="tnote">Los 33 leads se reparten entre 16 formularios completados en el sitio y 17 contactos iniciados por WhatsApp. Las dos campañas de Performance Max no registraron actividad en el mes.</p>
+
+    <h3 style="margin-top:46px">Rendimiento por dispositivo</h3>
+    <div class="tw"><table>
+      <tr><th>Dispositivo</th><th>Inversión</th><th>Clics</th><th>% de clics</th><th>Leads</th><th>Conversión</th><th>Costo/lead</th></tr>
+      <tr><td class="nm">Computadora</td><td>$969.757</td><td>1.098</td><td>38,8%</td><td>24</td><td>2,19%</td><td>$40.407</td></tr><tr><td class="nm">Celular</td><td>$1.057.333</td><td>1.708</td><td>60,4%</td><td>8</td><td>0,47%</td><td>$132.167</td></tr><tr><td class="nm">Tablet</td><td>$10.413</td><td>21</td><td>0,7%</td><td>1</td><td>4,76%</td><td>$10.413</td></tr>
+    </table></div>
+    <p class="tnote">Es el dato que sostiene la oportunidad 02: el celular concentra 6 de cada 10 clics y convierte 4,7 veces por debajo de la computadora. Trabajar la experiencia móvil del sitio actúa sobre tráfico que ya está pago.</p>
+
+    <h3 style="margin-top:46px">Principales términos de búsqueda</h3>
+    <div class="tw"><table>
+      <tr><th>Término</th><th>Inversión</th><th>Clics</th><th>Leads</th><th>Costo/lead</th></tr>
+      <tr><td class="nm">“plan rombo”</td><td>$192.503</td><td>413</td><td>5</td><td>$38.501</td></tr><tr><td class="nm">“renault”</td><td>$93.534</td><td>175</td><td>2</td><td>$46.767</td></tr><tr><td class="nm">“renault mar del plata”</td><td>$61.281</td><td>56</td><td>—</td><td>—</td></tr><tr><td class="nm">“renault plan”</td><td>$36.973</td><td>13</td><td>1</td><td>$36.973</td></tr><tr><td class="nm">“plan renault”</td><td>$32.685</td><td>51</td><td>—</td><td>—</td></tr><tr><td class="nm">“autos 100 financiados sin anticipo”</td><td>$32.790</td><td>38</td><td>—</td><td>—</td></tr><tr><td class="nm">“rombo”</td><td>$24.662</td><td>12</td><td>2</td><td>$12.331</td></tr><tr><td class="nm">“plan rombo renault”</td><td>$22.986</td><td>53</td><td>1</td><td>$22.986</td></tr><tr><td class="nm">“plan de ahorro”</td><td>$19.356</td><td>2</td><td>1</td><td>$19.356</td></tr><tr><td class="nm">“autos del mar mar del plata”</td><td>$19.568</td><td>23</td><td>1</td><td>$19.568</td></tr><tr><td class="nm">“renault plan de ahorro”</td><td>$17.005</td><td>20</td><td>1</td><td>$17.005</td></tr><tr><td class="nm">“auto del mar sa”</td><td>$16.766</td><td>28</td><td>—</td><td>—</td></tr><tr><td class="nm">“renault argentina”</td><td>$16.379</td><td>32</td><td>—</td><td>—</td></tr>
+    </table></div>
+    <p class="tnote">Términos con mayor inversión registrada en el mes. La familia “plan rombo” concentra la demanda explícita y es la que sostiene el volumen de la línea.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-kick">Línea Always-On · Meta Ads</div>
+    <h2>Resultados por campaña</h2>
+    <p class="sec-sub">La campaña de Mar del Plata concentra el grueso de la inversión y del volumen de la línea.</p>
+    <div class="tw"><table>
+      <tr><th>Campaña</th><th>Inversión</th><th>Leads</th><th>Costo/lead</th><th>Clics</th><th>Impresiones</th><th>Frecuencia</th></tr>
+      <tr><td class="nm">Always-On · Formulario (Mar del Plata)</td><td>$1.399.528</td><td class="hi">229</td><td>$6.111</td><td>2.922</td><td>241.206</td><td>2,24</td></tr><tr><td class="nm">Always-On · Formulario (Nacional)</td><td>$375.744</td><td class="hi">44</td><td>$8.540</td><td>1.056</td><td>55.682</td><td>2,05</td></tr><tr class="tot"><td>Total</td><td>$1.775.273</td><td>273</td><td>$6.503</td><td>3.978</td><td>296.888</td><td>—</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:46px">El portfolio creativo, pieza por pieza</h3>
+    <p class="sec-sub" style="margin-bottom:18px">Campaña de Mar del Plata. Las piezas marcadas como nuevas entraron en septiembre.</p>
+    <div class="tw"><table>
+      <tr><th>Pieza</th><th>Inversión</th><th>Leads</th><th>Costo/lead</th></tr>
+      <tr><td class="nm">Kwid · Plan Rombo <span class="tag">Julio</span></td><td>$477.667</td><td class="hi">136</td><td>$3.512</td></tr><tr><td class="nm">Kwid · Plan Rombo <span class="tag tag-new">Nueva</span></td><td>$586.890</td><td class="hi">64</td><td>$9.170</td></tr><tr><td class="nm">Kangoo · Plan Rombo <span class="tag tag-new">Nueva</span></td><td>$217.178</td><td class="hi">20</td><td>$10.859</td></tr><tr><td class="nm">Arkana · Plan Rombo <span class="tag tag-new">Nueva</span></td><td>$50.326</td><td class="hi">4</td><td>$12.582</td></tr><tr><td class="nm">Kardian · Plan Rombo <span class="tag tag-new">Nueva</span></td><td>$42.841</td><td class="hi">2</td><td>$21.421</td></tr><tr><td class="nm">Boreal · Plan Rombo <span class="tag tag-new">Nueva</span></td><td>$16.158</td><td class="hi">2</td><td>$8.079</td></tr><tr><td class="nm">Sandero · Plan Rombo <span class="tag">Julio</span></td><td>$1.492</td><td class="hi">1</td><td>$1.492</td></tr><tr><td class="nm">Oroch · Plan Rombo <span class="tag">Julio</span></td><td>$4.040</td><td class="hi">0</td><td>—</td></tr><tr><td class="nm">Kangoo Express · Plan Rombo <span class="tag">Julio</span></td><td>$2.937</td><td class="hi">0</td><td>—</td></tr>
+    </table></div>
+    <p class="tnote">En agosto una sola pieza explicaba el 98% de los leads de la zona. En septiembre siete piezas aportan volumen y la principal baja al 59%: la concentración que señalamos el mes pasado quedó corregida.</p>
+
+    <h3 style="margin-top:46px">Línea nacional</h3>
+    <div class="tw"><table>
+      <tr><th>Pieza</th><th>Inversión</th><th>Leads</th><th>Costo/lead</th></tr>
+      <tr><td class="nm">Auto del Mar · Marca + Producto · Video</td><td>$365.059</td><td class="hi">43</td><td>$8.490</td></tr><tr><td class="nm">Tu próximo 0km · Carrusel</td><td>$8.277</td><td class="hi">1</td><td>$8.277</td></tr><tr><td class="nm">Financiá hoy · Beneficios · Carrusel</td><td>$2.408</td><td class="hi">0</td><td>—</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">Dónde rindió mejor</div>
+    <h2>Ubicaciones y audiencias</h2>
+    <p class="sec-sub">Lecturas del mes que orientan qué formato y qué público seguir trabajando.</p>
+    <div class="cards">
+      <div class="card"><div class="big">$5.714</div><div class="unit">por lead · Instagram</div>
+        <p>163 de los 273 leads de la línea (59,7%) con el 52,5% de la inversión. Instagram Reels resolvió a $5.307: el mejor rendimiento del mes.</p></div>
+      <div class="card"><div class="big">$6.102</div><div class="unit">por lead · 25 a 54 años</div>
+        <p>201 leads (73,6%) con el 69,1% de la inversión. Coincide con el perfil de comprador definido para el plan.</p></div>
+      <div class="card"><div class="big">$5.656</div><div class="unit">por lead · público femenino</div>
+        <p>120 leads a un costo por lead 20,9% menor que el del público masculino ($7.151). Muestra chica, útil para definir pruebas de mensaje.</p></div>
+    </div>
+
+    <h3 style="margin-top:46px">Ubicaciones</h3>
+    <div class="tw"><table>
+      <tr><th>Ubicación</th><th>Inversión</th><th>Leads</th><th>Costo por lead</th></tr>
+      <tr><td class="nm">Instagram Reels</td><td>$212.282</td><td>40</td><td class="hi">$5.307</td></tr><tr><td class="nm">Instagram Stories</td><td>$430.021</td><td>77</td><td class="hi">$5.585</td></tr><tr><td class="nm">Video in-stream</td><td>$5.756</td><td>1</td><td class="hi">$5.756</td></tr><tr><td class="nm">Instagram Feed</td><td>$287.570</td><td>46</td><td>$6.252</td></tr><tr><td class="nm">Facebook Search</td><td>$31.546</td><td>5</td><td>$6.309</td></tr><tr><td class="nm">Facebook Feed</td><td>$337.385</td><td>48</td><td>$7.029</td></tr><tr><td class="nm">Facebook Reels</td><td>$244.591</td><td>34</td><td>$7.194</td></tr><tr><td class="nm">Marketplace</td><td>$52.628</td><td>7</td><td>$7.518</td></tr><tr><td class="nm">Facebook Stories</td><td>$102.133</td><td>10</td><td>$10.213</td></tr><tr><td class="nm">Reels overlay</td><td>$12.462</td><td>1</td><td>$12.462</td></tr><tr><td class="nm">Notificaciones Facebook</td><td>$55.570</td><td>4</td><td>$13.892</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:46px">Audiencia por edad</h3>
+    <div class="tw"><table>
+      <tr><th>Rango</th><th>Inversión</th><th>Leads</th><th>Costo por lead</th></tr>
+      <tr><td class="nm">18-24 años</td><td>$28.330</td><td>5</td><td>$5.666</td></tr><tr><td class="nm">25-34 años</td><td>$391.920</td><td>61</td><td>$6.425</td></tr><tr><td class="nm">35-44 años</td><td>$419.967</td><td>74</td><td>$5.675</td></tr><tr><td class="nm">45-54 años</td><td>$414.623</td><td>66</td><td>$6.282</td></tr><tr><td class="nm">55-64 años</td><td>$279.918</td><td>42</td><td>$6.665</td></tr><tr><td class="nm">65+ años</td><td>$240.516</td><td>25</td><td>$9.621</td></tr>
+    </table></div>
+    <p class="tnote">Lectura informativa para el mensaje y las piezas. No proponemos separar presupuestos por edad, para no interferir con el aprendizaje de las campañas recién renovadas.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-kick">Conversión</div>
+    <h2>De la inversión al lead</h2>
+    <p class="sec-sub">Recorrido conjunto de las dos líneas de trabajo en septiembre.</p>
+    <div class="funnel">
+      <div class="fstep"><div class="fv">$3,81M</div><div class="fl">Inversión</div></div>
+      <div class="fstep"><div class="fv">358.157</div><div class="fl">Impresiones</div></div>
+      <div class="fstep"><div class="fv">6.805</div><div class="fl">Clics</div></div>
+      <div class="fstep on"><div class="fv">306</div><div class="fl">Leads</div></div>
+      <div class="fstep"><div class="fv">$12.460</div><div class="fl">Costo por lead</div></div>
+    </div>
+    <div class="note-box">
+      <h4>Sobre la medición</h4>
+      <p>Los leads de Meta Ads corresponden a formularios nativos completados dentro de la red social. Los de Google Ads, a formularios enviados desde el sitio y a contactos iniciados por WhatsApp.</p>
+      <p><b>Todavía no contamos con datos de calidad ni de volumen recibido del lado comercial</b>, por lo que el recorrido posterior del lead —contacto efectivo, visita y cierre— no se mide en las plataformas de medios. Es exactamente lo que resolvería la planilla de seguimiento de la oportunidad 04.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">Cierre</div>
+    <h2>Resumen ejecutivo</h2>
+    <p class="sec-sub">306 leads en un mes de transición planificada, con el portfolio creativo renovado y el formulario actualizado con los modelos nuevos.</p>
+    <div class="sum">
+      <div class="it"><span class="n">1</span><div><h4>Lo que se ejecutó</h4>
+        <p>Se reemplazó el formulario nativo de Meta incorporando los modelos nuevos y entró un portfolio creativo completo. La concentración en una sola pieza, que señalamos en agosto, quedó corregida: hoy siete piezas aportan volumen.</p></div></div>
+      <div class="it"><span class="n">2</span><div><h4>Lo que sostuvo el mes</h4>
+        <p>Google Ads cumplió el media plan con el 101,9% de la inversión prevista y mantuvo su volumen (33 leads frente a 35 en agosto). Instagram volvió a ser la ubicación más eficiente de la línea social, a $5.714 por lead.</p></div></div>
+      <div class="it"><span class="n">3</span><div><h4>Hacia dónde vamos</h4>
+        <p>La mayor oportunidad no está en la pauta sino después del clic: 6 de cada 10 clics llegan desde celular y convierten 4,7 veces menos. Trabajar la experiencia móvil del sitio y recuperar la planilla de seguimiento son las dos palancas de octubre.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-kick">Próximos pasos</div>
+    <h2>Próximos pasos sugeridos</h2>
+    <p class="sec-sub">Hoja de ruta propuesta para validar con el equipo de Renault del Mar. Ninguna de estas acciones está tomada.</p>
+    <div class="steps">
+      <div class="step"><div class="ph">Ya implementado</div><h3>Septiembre</h3>
+        <ul>
+          <li><b>Reemplazo del formulario nativo</b> de Meta con los modelos nuevos, a pedido del equipo.</li>
+          <li><b>Renovación del portfolio creativo</b>: Kwid, Kangoo, Arkana, Kardian y Boreal.</li>
+          <li><b>Diversificación de la captación</b>: de 3 a 7 piezas aportando leads en Mar del Plata.</li>
+        </ul></div>
+      <div class="step"><div class="ph">Próximos días</div><h3>Estabilización</h3>
+        <ul>
+          <li><b>Sostener las piezas nuevas</b> hasta que completen su aprendizaje, concentrando presupuesto en Kwid y Kangoo.</li>
+          <li><b>Relevamiento de la experiencia móvil</b> del sitio, empezando por el comportamiento de la burbuja de chat.</li>
+          <li><b>Reenvío de la planilla</b> de seguimiento de leads, simplificada al mínimo de campos.</li>
+        </ul></div>
+      <div class="step"><div class="ph g">Octubre</div><h3>Optimización</h3>
+        <ul>
+          <li><b>Mejora de navegabilidad móvil</b>: ShakeAgain puede relevar, cotizar o ejecutar el trabajo, según prefiera el equipo.</li>
+          <li><b>Refuerzo en términos de financiación y cuotas</b> dentro de la campaña genérica nacional.</li>
+          <li><b>Definición sobre Performance Max</b>, hoy sin actividad.</li>
+        </ul></div>
+      <div class="step"><div class="ph g">Más adelante</div><h3>A confirmar</h3>
+        <ul>
+          <li><b>Recalibrar el media plan</b> con los datos reales posteriores al cambio de formulario.</li>
+          <li><b>Optimizar por resultado comercial</b> una vez que haya un mes de planilla cargada.</li>
+          <li><b>Acordar el objetivo de leads</b> de los próximos meses junto al equipo.</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="wrap">
+    <h2>Muchas <b>Gracias</b></h2>
+    <img src="data:image/png;base64,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" alt="ShakeAgain">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Reporte de Performance</b> · Renault del Mar · Septiembre 2026 (mes cerrado)<br>
+    Datos de Google Ads y Meta Ads vía Master Metrics · Objetivos y presupuestos del media plan de septiembre · Comparativa vs. agosto 2026 · Moneda ARS<br>
+    Líneas en pauta: Performance (búsqueda) y Always-On (social) · Solo medios pagos
+  </div>
+</footer>
+
+</body>
+</html>
